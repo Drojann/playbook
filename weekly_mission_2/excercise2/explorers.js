@@ -74,3 +74,19 @@ console.log(new_stacks)
 console.log("2.4")
 const explorer_js = explorers.filter(listJS => listJS.stack.includes("js"))
 console.log(explorer_js)
+
+console.log("2.5")
+const explorer_mx = explorers.find(listmx => listmx.city === "CDMX")
+console.log(explorer_mx)
+
+console.log("2.6")
+const all_excercises = explorers.reduce ((acc, listex) => acc + listex.exercises_completed, 0)
+console.log(all_excercises)
+
+console.log("2.7")
+const front_true = explorers.some(explorer => explorer["missions"]["frontend"].exercisesFinished === true)
+console.log(front_true)
+
+console.log("2.8")
+const explorer_finished = explorers.every(explorer => explorer["missions"]["onboarding"].isFinished === true)
+console.log(explorer_finished)
